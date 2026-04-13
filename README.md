@@ -34,7 +34,7 @@
 
 ### デモURL
 Streamlit Cloud でインタラクティブデモを公開しています。  
-→ **（デプロイ後追記）**
+→ **https://matching-assignment-egkl6rdruxeuwwugvgqhk3.streamlit.app/**
 
 ---
 
@@ -66,7 +66,7 @@ $$\text{s.t.} \quad \sum_{i} x_{ij} = 1 \quad \forall j, \qquad \sum_{j} x_{ij} 
 |---|---|---|---|
 | ハンガリアン法 | スクラッチ実装（双対上昇法） | 厳密解 | 1対1割当 |
 | scipy | linear_sum_assignment | 厳密解 | 1対1割当 |
-| MIP | PuLP + HiGHS | 厳密解 | 1対多割当 |
+| MIP | PuLP + CBC | 厳密解 | 1対多割当 |
 
 ---
 
@@ -121,7 +121,7 @@ matching-assignment/
 │   └── 2_extended_assignment.py # 拡張割当（MIP）
 ├── solvers/
 │   ├── hungarian.py            # ハンガリアン法スクラッチ実装
-│   └── mip_assignment.py       # MIP（PuLP/HiGHS）
+│   └── mip_assignment.py       # MIP（PuLP/CBC）
 └── utils/
     └── cost_matrix.py          # 座標生成・距離行列計算
 ```
@@ -149,7 +149,7 @@ python solvers/mip_assignment.py
 | 分類 | 技術 |
 |---|---|
 | 最適化（ハンガリアン法） | スクラッチ実装（双対上昇法） |
-| 最適化（MIP） | PuLP + HiGHS |
+| 最適化（MIP） | PuLP + CBC |
 | 最適化（ライブラリ比較） | scipy.optimize.linear_sum_assignment |
 | フレームワーク | Streamlit |
 | グラフ描画 | Plotly |
