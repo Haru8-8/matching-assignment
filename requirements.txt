@@ -1,0 +1,5 @@
+numpy==2.4.4
+plotly==6.7.0
+PuLP==3.3.0
+scipy==1.17.1
+streamlit==1.56.0
